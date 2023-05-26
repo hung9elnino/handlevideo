@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0075ff;
+}
+
+:root{
+    --pink-color: #e26e70;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player {
+width: 1200px;
+position: relative;
+  overflow: hidden;
+  /* border: 2px solid var(--primary-color); */
+  box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.1);
+}
+
+.player__controls {
+width: 100%;
+position: absolute;
+display: flex;
+align-items: center;
+bottom: 0;
+  left: 0;
+transform: translateY(100%);
+transition: 0.25s;
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9));
+  color: white;
+}
+
+.player:hover .player__controls {
+transform: unset;
+}
+
+.player__controls > * {
+margin: 5px;
+}
+
+.player__progress {
+flex: 1;
+height: 10px;
+background-color: #fff;
+  position: relative;
+}
+
+.player__progress__filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.player__button {
+outline: none;
+border: none;
+background-color: transparent;
+color: white;
+  cursor: pointer;
+}
+
+.player__button:hover {
+color: var(--primary-color);
+}
+
+.toggle {
+  font-size: 30px;
+}
+
+.player__volume input {
+  position: relative;
+  top: 1px;
+}
